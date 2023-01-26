@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://datamall2.mytransport.sg/ltaodataservice";
+const BASE_URL = "http://datamall2.mytransport.sg/ltaodataservice";
 // const CROSS_DOMAIN = "https://cors-anywhere.herokuapp.com";
 // const REQUEST_URL = `${CROSS_DOMAIN}/${BASE_URL}`;
 

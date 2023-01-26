@@ -21,7 +21,7 @@ function DetectLocationMarker({ LocationDetected, setLocationDetected, flyToZoom
             })
             setLocationDetected(false);
         }
-    }, [LocationDetected, setLocationDetected, map, position, radius, flyToZoom])
+    }, [LocationDetected, setLocationDetected, map, position, radius, flyToZoom, setPosition])
 
     return position === null ? null : (
         <>
