@@ -1,0 +1,71 @@
+h1.title {
+    text-align: center; 
+    font-size: 30px; 
+    margin: 15px 0 15px 0; 
+}
+
+.main-container {
+    overflow: hidden; 
+    width: 96%; 
+    height: 94vh; 
+    margin: 3vh auto 3vh auto; 
+    display: flex; 
+    flex-direction: row; 
+}
+
+.sideBar {
+    background-color: #fff; 
+    width: 520px; 
+    max-width: 50%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.find-locations-container {
+    padding: 3px 0 0 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    row-gap: 0px; 
+}
+
+.select-detect-container {
+    display: flex; 
+    flex-direction: row; 
+}
+
+select {
+    font-size: 0.9rem; 
+    border: 2px solid #c8c6c2; 
+    border-radius: 5px; 
+    margin: 5px 8px 0 8px; 
+    padding: 0 0 0 5px; 
+}
+
+.routing-container {
+    margin: 0; 
+}
+
+.search-results-container {
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+}
+
+.leaflet-container {
+    width: 100%; 
+    height: 100%; 
+}
+
+.search-container {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: right; 
+}
+
+.set-start-end {
+    margin: -10px 0 8px 0; 
+}
+
+.driving-walking-route {
+    margin: 0 0 8px 0; 
+}

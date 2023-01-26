@@ -1,0 +1,20 @@
+.button {
+    font-size: 0.9rem; 
+    min-width: 3rem; 
+    max-height: 2.6rem; 
+    margin: 0.4rem 0.5rem 0 0; 
+    padding: 0.5rem; 
+    color: white; 
+    background-color: lightseagreen; 
+    border: 2px solid lightseagreen; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition-duration: 0.1s; 
+    white-space: nowrap; 
+}
+
+.button:hover {
+    color: white; 
+    background-color: lightslategray; 
+    border: 2px solid lightslategray; 
+}
