@@ -63,7 +63,8 @@ function Main() {
     const [zoom, setZoom] = useState(12);
 
     // Taxi Availability
-    const [taxiAvailabilityList, setTaxiAvailabilityList] = useState(TaxiAvailabilityJSON.value);
+    // const [taxiAvailabilityList, setTaxiAvailabilityList] = useState(TaxiAvailabilityJSON.value);
+    const [taxiAvailabilityList, setTaxiAvailabilityList] = useState([]);
 
     // eslint-disable-next-line
     const [SelectedOption, setSelectedOption] = useState();
@@ -172,7 +173,7 @@ function Main() {
         }
         const interval = setInterval(() => {
             funcGetTaxiAvailability(setTaxiAvailabilityList); //get taxi availability from LTA
-        }, 600000);
+        }, 60000);
         return () => clearInterval(interval);
     }, [])
 
