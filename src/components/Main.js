@@ -167,13 +167,12 @@ function Main() {
             // funcGetPlanningArea(setAreaPolygonList); //get area update from OneMap
             funcGetPlanningAreaStatic(setAreaPolygonList); //get area from static json
             funcGetTaxiAvailability(setTaxiAvailabilityList); //get taxi availability from LTA
-            console.log(taxiAvailabilityList);
             // eslint-disable-next-line
             initialRender = false;
         }
         const interval = setInterval(() => {
             funcGetTaxiAvailability(setTaxiAvailabilityList); //get taxi availability from LTA
-        }, 60000);
+        }, 30000);
         return () => clearInterval(interval);
     }, [])
 

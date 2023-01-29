@@ -6,8 +6,13 @@ function funcGetTaxiAvailability(handler) {
             let taxiList = [];
             //testing
             const response = await LTAtaxiAPI.get()
-            console.log(response.data);
-            handler(response.data);
+            const coordinates = response.data.features[0].geometry.coordinates;
+            for (let i = 0; i < coordinates.length; i++) {
+                const latlongcoord = { "Longitude": coordinates[i][0], "Latitude": coordinates[i][1] }
+                taxiList = [...taxiList, latlongcoord]
+            }
+            console.log(taxiList.length);
+            handler(taxiList);
 
         } catch (error) {
             console.log(error.message)
