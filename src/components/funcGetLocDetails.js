@@ -7,8 +7,8 @@ function funcGetLocDetails([lat, long], handler) {
         longitude: long,
         buffer: 10,
         addressType: "All",
-        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjk2NTksInVzZXJfaWQiOjk2NTksImVtYWlsIjoieG9uZzAwMkBnbWFpbC5jb20iLCJmb3JldmVyIjpmYWxzZSwiaXNzIjoiaHR0cDpcL1wvb20yLmRmZS5vbmVtYXAuc2dcL2FwaVwvdjJcL3VzZXJcL3Nlc3Npb24iLCJpYXQiOjE2NzQ3NDIxODIsImV4cCI6MTY3NTE3NDE4MiwibmJmIjoxNjc0NzQyMTgyLCJqdGkiOiIwNGY2ZmYzYmFmNmJkNTI4MGNlYjMxOGNjYTk2ZDc2YSJ9.9qsdn88ctzTrfNd740awnuCSI28gVl8t2qophyQsBbo"
-        // token expires Sunday, January 29, 2023 10:09:42 PM
+        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjk2NTksInVzZXJfaWQiOjk2NTksImVtYWlsIjoieG9uZzAwMkBnbWFpbC5jb20iLCJmb3JldmVyIjpmYWxzZSwiaXNzIjoiaHR0cDpcL1wvb20yLmRmZS5vbmVtYXAuc2dcL2FwaVwvdjJcL3VzZXJcL3Nlc3Npb24iLCJpYXQiOjE2NzUzNTEyMDcsImV4cCI6MTY3NTc4MzIwNywibmJmIjoxNjc1MzUxMjA3LCJqdGkiOiI2Nzg4Mzg3MmUzNDg0YWUxODE4ZjUxMGE2M2I1MDA0ZiJ9.JIx325C3ZK7o4VbAOkt0nmochlY4uCDv9FTP4ANtEH8"
+        // token expires Sunday, February 5, 2023 11:20:07 PM
     }
 
     let resultList = [];

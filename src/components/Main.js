@@ -161,6 +161,7 @@ function Main() {
         setShowPolyLine(true);
     }
 
+    const [test, setTest] = useState([]); //testing
     let initialRender = true;
     useEffect(() => {
         if (initialRender) {
@@ -172,6 +173,7 @@ function Main() {
         }
         const interval = setInterval(() => {
             funcGetTaxiAvailability(setTaxiAvailabilityList); //get taxi availability from LTA
+            console.log(center);
         }, 30000);
         return () => clearInterval(interval);
     }, [])
@@ -250,12 +252,12 @@ function Main() {
                     <div className="find-locations-container">
                         <div className="select-detect-container">
                             <select
-                                value={SelectedOption}
+                                defaultValue={'DEFAULT'}
                                 onChange={(e) => {
                                     handlerSelectArea(e.target.value)
                                 }}
                             >
-                                <option value="" selected disabled>-- Select a region to view --</option>
+                                <option value='DEFAULT' disabled>-- Select a region to view --</option>
                                 {AreaPolygonList.map(o => (
                                     <option key={o.pln_area_n} value={o.pln_area_n}>{o.pln_area_n}</option>
                                 ))}
@@ -267,6 +269,8 @@ function Main() {
                                 setZoom={setZoom}
                                 setUserLatLong={setUserLatLong}
                                 flyToZoom={flyToZoom}
+                                center={center}
+                                zoom={zoom}
                             />
                         </div>
                         {locSearchBar}
@@ -302,7 +306,9 @@ function Main() {
                         LocationDetected={LocationDetected}
                         setLocationDetected={setLocationDetected}
                         center={center}
+                        setCenter={setCenter}
                         zoom={zoom}
+                        setZoom={setZoom}
                         userLatLong={userLatLong}
                         destLatLong={destLatLong}
                         showPolyLine={showPolyLine}

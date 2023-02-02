@@ -1,9 +1,11 @@
-import { useMap } from "react-leaflet"; 
+import { useEffect } from "react";
+import { useMap } from "react-leaflet";
 
 function SetView({ center, zoom }) {
-    const map = useMap(); 
-    // map.setView(marker, zoom); 
-    map.flyTo(center, zoom); 
+    const map = useMap();
+    useEffect(() => {
+        map.flyTo(center, zoom)
+    }, [center, map, zoom]);
 }
 
 export default SetView; 

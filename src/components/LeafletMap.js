@@ -12,13 +12,16 @@ import DetectLocationMarker from "./DetectLocationMarker";
 import CountTaxis from "./CountTaxis";
 
 import DefaultMarkerIconRed from "../images/DefaultMarkerIconRed.png";
+import CurrentView from "./CurrentView";
 
 function LeafletMap({
     polygon,
     LocationDetected,
     setLocationDetected,
     center,
+    setCenter,
     zoom,
+    setZoom,
     userLatLong,
     destLatLong,
     showPolyLine,
@@ -42,7 +45,7 @@ function LeafletMap({
     return (
         <>
             <MapContainer
-                center={[1.343, 103.814]}
+                center={center}
                 zoom={12} minZoom={11} maxZoom={18}
                 /* maxBounds={[[1.514, 104.166], [1.114, 103.581]]} */
                 zoomSnap={0.5} zoomDelta={0.5}
@@ -57,6 +60,7 @@ function LeafletMap({
                 <ResetViewControl
                     icon="url(https://raw.githubusercontent.com/se-cohort1-group2/project-ReactJS/71a66e2ba063dc9ae3a652cac95531e249ea5b71/assets/ResetMapView.svg)"
                 />
+                {/* <CurrentView center={center} setCenter={setCenter} zoom={zoom} setZoom={setZoom} /> */}
                 <TaxiStands initialZoom={12} handlerGetClickedDest={handlerGetClickedDest} />
                 <TaxiAvailability initialZoom={12} taxiAvailabilityList={taxiAvailabilityList} handlerGetClickedDest={handlerGetClickedDest} />
                 <Polygon pathOptions={{ color: "green" }} positions={polygon} />
@@ -68,9 +72,10 @@ function LeafletMap({
                     position={userLatLong}
                     icon={new Icon({ iconUrl: DefaultMarkerIconRed, iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34] })}
                 >
-                    <Popup>
+                    {/* change popup to outside map */}
+                    {/* <Popup>
                         Taxis within {radius} metres: {taxiCount}
-                    </Popup>
+                    </Popup> */}
                 </Marker>}
                 {userLatLong && <CountTaxis marker={userLatLong} radius={radius} setTaxiCount={setTaxiCount} taxiAvailabilityList={taxiAvailabilityList} />}
                 {destLatLong && <Marker position={destLatLong} icon={new Icon({ iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41] })} />}
